@@ -15,3 +15,15 @@ vim.keymap.set("n", "<leader>fU", function()
     }
   })
 end, { desc = "Find current file usages (GrugFar)" })
+
+-- Scrolling: Keep cursor in the middle
+map("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
+map("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
+
+-- Search: Keep search results centered
+map("n", "n", "nzzzv", { desc = "Next search result (centered)" })
+map("n", "N", "Nzzzv", { desc = "Prev search result (centered)" })
+
+-- Jumps: Center after jumping to next/previous items
+map("n", "}", "}zz", { desc = "Jump to next paragraph and center" })
+map("n", "{", "{zz", { desc = "Jump to prev paragraph and center" })
