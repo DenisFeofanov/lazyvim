@@ -5,3 +5,13 @@ local map = vim.keymap.set
 
 -- Select all text
 map("n", "<leader>a", "ggVG", { desc = "Select all" })
+
+-- Get file usages
+vim.keymap.set("n", "<leader>fU", function()
+  local filename = vim.fn.expand("%:t:r") -- gets filename without extension
+  require("grug-far").open({
+    prefills = {
+      search = filename
+    }
+  })
+end, { desc = "Find current file usages (GrugFar)" })
