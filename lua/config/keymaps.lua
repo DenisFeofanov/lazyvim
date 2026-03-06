@@ -27,3 +27,6 @@ map("n", "N", "Nzzzv", { desc = "Prev search result (centered)" })
 -- Jumps: Center after jumping to next/previous items
 map("n", "}", "}zz", { desc = "Jump to next paragraph and center" })
 map("n", "{", "{zz", { desc = "Jump to prev paragraph and center" })
+
+-- Copy filename
+map("n", "<leader>cf", ":let @+ = expand('%')<CR>", { desc = "Copy filename" })
